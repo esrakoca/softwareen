@@ -23,7 +23,7 @@ namespace hanuman
         {
             string username = textBox1.Text;
             string userpsw = textBox2.Text;
-            MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;password=E1sraKo3ca;database=vetapp");
+            MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;persistsecurityinfo=True;database=vetapp");
             MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from userinfo where username='" + textBox1.Text + "' and userpsw = '" + textBox2.Text + "' ", connection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
